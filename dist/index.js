@@ -36,6 +36,9 @@
           options.configure(window.rivets);
         }
         root = window.document.documentElement;
+        if (options.templateDelimiters){
+          window.rivets.configure(options);
+        }
         window.rivets.bind(root, locals, options);
         if (options.fullDoc) {
           doctype = ((_ref = window.document.doctype) != null ? _ref.toString() : void 0) || '';
